@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Basket : MonoBehaviour
 {
     public float Speed = 10f;
     int score = 0;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
 
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "apple")
         {
             score += 10;
-            scoreText.text = score.ToString();
+            scoreText.text = "Skor: " + score.ToString();
             Destroy(collision.gameObject);  
 
         }
