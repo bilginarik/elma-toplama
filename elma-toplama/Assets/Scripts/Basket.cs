@@ -15,10 +15,7 @@ public class Basket : MonoBehaviour
         {
             score += 10;
             scoreText.text = score.ToString();
-
-            float rnd = Random.Range(-2f, 14f);
-
-            collision.gameObject.transform.position = new Vector3(rnd,7,-7);
+            Destroy(collision.gameObject);  
 
         }
 

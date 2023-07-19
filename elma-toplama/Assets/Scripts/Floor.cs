@@ -8,8 +8,7 @@ public class Floor : MonoBehaviour
     {
         if(collision.gameObject.tag == "apple")
         {
-            float rnd = Random.Range(-2f, 14f);
-            collision.gameObject.transform.position = new Vector3(rnd * Time.deltaTime, 7, -7);
+            Destroy(collision.gameObject);
         }
     }
 }
