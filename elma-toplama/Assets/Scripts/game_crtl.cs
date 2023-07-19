@@ -7,9 +7,18 @@ public class game_crtl : MonoBehaviour
     public GameObject Apple;
     bool pauseGame = false;
 
+    public void exit_game()
+    {
+        Application.Quit();
+    }
+    public void goto_menu()
+    {
+        SceneManager.LoadScene("Scenes/MenuScene");
+        Time.timeScale = 0.0f;
+    }
     public void new_game()
     {
-        SceneManager.LoadScene("Scenes/SampleScene");
+        SceneManager.LoadScene("Scenes/GameScene");
         Time.timeScale = 1.0f;
     }
     public void pause_game()
